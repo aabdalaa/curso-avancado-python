@@ -4,6 +4,10 @@ extrato = ""
 numero_saques = 0
 LIMITE_SAQUES = 3
 
+def criar_user():
+    nome =
+    idade = 
+    cpf = 
 
 def depositar(valor):
             global saldo, extrato
@@ -47,6 +51,8 @@ def exibir_extrato(saldo):
 
 menu = """
 
+[u] Criar Usuário
+[c] Criar conta
 [d] Depositar
 [s] Sacar
 [e] Extrato
@@ -63,8 +69,7 @@ while True:
         depositar(valor)       
 
     elif opcao == "s":
-        valor = float(input("Informe o valor do saque: "))
-        sacar(valor)
+        sacar(valor = float(input("Informe o valor do saque: ")))
 
     elif opcao == "e":
         exibir_extrato(saldo)
