@@ -1,3 +1,5 @@
+usuarios = []
+conta = []
 saldo = 0
 limite = 1000
 extrato = ""
@@ -5,9 +7,16 @@ numero_saques = 0
 LIMITE_SAQUES = 3
 
 def criar_user():
-    nome =
-    idade = 
-    cpf = 
+    cpf = int(input("DIGITE SEU CPF: "))
+    for usuario in usuarios:
+         if usuario[0] == cpf:
+              print("Esse usuário já existe!")
+              return
+    nome = input("DIGITE SEU NOME: ")
+    idade = int(input("DIGITE SUA IDADE: "))
+    cadastro = [cpf, nome, idade]
+    usuarios.append(cadastro)
+    print("Usuário cadastrado com sucesso!")
 
 def depositar(valor):
             global saldo, extrato
@@ -76,6 +85,12 @@ while True:
 
     elif opcao == "q":
         break
+
+    elif opcao == "u":
+         criar_user()
+
+    elif opcao == "c":
+         
 
     else:
         print("Operação inválida, por favor selecione novamente a operação desejada.")
