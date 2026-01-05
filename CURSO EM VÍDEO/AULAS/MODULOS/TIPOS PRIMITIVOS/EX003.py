@@ -1,0 +1,10 @@
+n = int(bool(input("DIGITE UM VALOR: ")))
+n1 = bool(int(input("DIGITE OUTRO VALOR: ")))
+n2 = int(bool(input("DIGITE OUTRO VALOR: ")))
+n3 = input("DIGITE ALGO: ")
+
+print(n + n1 + n2)
+print("O tipo primitivo do primeiro valor é:", type(n))
+print("O tipo primitivo do segundo valor é:", type(n1))
+print("O quarto item é númerico? ", n3.isnumeric())
+print("O quarto item é Letra? ", n3.isalpha())
